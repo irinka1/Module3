@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**Создать новый проект на GitHub и на локальном компе Написать программу которая:
@@ -18,29 +19,27 @@ public class DZ3 {
         int[] mas = new int[a];
         int max = mas[0];
         int min = mas[0];
-        int p = mas[0];
-        for (int i = 0; i < mas.length; i++) {    //считываем числа как элементы массива
-            mas[i] = sc.nextInt();
-            sc.nextLine();
-        }
+        int p=0;
 
-        for (int i = 0; i < mas.length; i++) {    //выбираем макс
+
+        for (int i = 1; i < mas.length; i++) {    //выбираем макс
             if (mas[i] > max)
-                max = mas[i];
+                max = mas[i];}
 
-            if (mas[i] < min)                       //выбираем мин
+
+        for (int i = 1; i < mas.length; i++) {    //выбираем макс
+             if (mas[i] < min)                       //выбираем мин
                 min = mas[i];
-
                 }
-        for (int i = 0; i < mas.length; i++) {
+        /*for (int i = 0; i < mas.length; i++) {
            if (mas[i] == 5) {                   //ищем числа 5
-            p = 1;
-            System.out.println(p);}}
+           p++;
+            }}
 
          for (int i = 0; i<mas.length; i++){      //сортировка пузырьком по возрастанию
                 for(int j =1; j<(mas.length-i); j++) {
                     if (mas [j-1]>mas[j])
-                    {
+                    {       й
                         int temp = mas[i];
                         mas[j-1]=mas[j];
                         mas [j] =temp;
@@ -50,10 +49,9 @@ public class DZ3 {
                     for (int mass :mas);
 
           }
-        }
+        }*/
 
 
-            System.out.println(mas);
         System.out.println("Максимальное число: " + max);
         System.out.println("Минимальное число: " + min);
 
