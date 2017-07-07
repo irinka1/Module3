@@ -1,3 +1,6 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,47 +16,54 @@ import java.util.Scanner;
 public class DZ3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введите размер массива:");
+
+        int dlina = sc.nextInt();
+
+        int []mas = new int[dlina];
 
         System.out.println("Введите числа в массив: ");
-        int a = sc.nextInt();
-        int[] mas = new int[a];
+
+        for (int i=0;i<mas.length;i++)
+        {mas[i]=sc.nextInt();}
+        String x=Arrays.toString(mas);
+
         int max = mas[0];
         int min = mas[0];
-        int p=0;
 
 
-        for (int i = 1; i < mas.length; i++) {    //выбираем макс
-            if (mas[i] > max)
-                max = mas[i];}
-
-
-        for (int i = 1; i < mas.length; i++) {    //выбираем макс
-             if (mas[i] < min)                       //выбираем мин
-                min = mas[i];
-                }
-        /*for (int i = 0; i < mas.length; i++) {
-           if (mas[i] == 5) {                   //ищем числа 5
-           p++;
-            }}
-
-         for (int i = 0; i<mas.length; i++){      //сортировка пузырьком по возрастанию
-                for(int j =1; j<(mas.length-i); j++) {
-                    if (mas [j-1]>mas[j])
-                    {       й
-                        int temp = mas[i];
-                        mas[j-1]=mas[j];
-                        mas [j] =temp;
-
-                    }
-
-                    for (int mass :mas);
-
-          }
-        }*/
-
+              for (int j = 0; j < mas.length; j++) {
+                  if (mas[j] > max)
+                  { max=mas[j] ;
+                  }
+                else if (mas[j] < min) {
+                      min=mas[j];
+                  }
+              }
 
         System.out.println("Максимальное число: " + max);
         System.out.println("Минимальное число: " + min);
+
+        int p =0;
+        for (int h=0; h<mas.length;h++) {
+            if (mas[h]==5)
+            {p++;}
+        }
+        System.out.println("Количество 5 = "+p);
+//делаем сортировку пузырьком
+        for(int s=0; s <mas.length; s++){
+            for(int j = s; j >=1; j--) {
+                if (mas[j-1] > mas[j]) {
+                    int t = mas[j];
+                    mas[j] = mas[j - 1];
+                    mas[j - 1] = t;
+
+
+                }
+            }
+        }
+        String x1=Arrays.toString(mas);
+        System.out.print("Отсортированный массив:   "+x1);
 
         }
     }
