@@ -4,25 +4,25 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**Создать новый проект на GitHub и на локальном компе Написать программу которая:
- 1. на вход через консоль принимает размер массива
- 2. на вход через консоль принимает массив чисел
- 3. найти минимальное число в массиве и вывести в консоль (без использования сортировки)
- 4. найти максимальное число в массиве и вывести в консоль (без использования сортировки)
- 5. посчитать кол-во повторений числа 5 и вывести в консоль
- 6. вывести в консоль отсортированный массив
+/** Create a new project on GitHub and on the local computer Write a program that:
+ 1. on the input through the console takes the size of the array
+ 2. the input through the console takes an array of numbers
+ 3. find the minimum number in the array and output to the console (without using sorting)
+ 4. Find the maximum number in the array and output to the console (without using sorting)
+ 5. Count the number of repetitions of the number 5 and output to the console
+ 6. output to the console the sorted array
  * Created by i on 05.07.2017.
  */
 public class DZ3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите размер массива:");
+        System.out.println("Enter the size of the array:");
 
         int dlina = sc.nextInt();
 
         int []mas = new int[dlina];
 
-        System.out.println("Введите числа в массив: ");
+        System.out.println("Enter the numbers in the array: ");
 
         for (int i=0;i<mas.length;i++)
         {mas[i]=sc.nextInt();}
@@ -41,16 +41,16 @@ public class DZ3 {
                   }
               }
 
-        System.out.println("Максимальное число: " + max);
-        System.out.println("Минимальное число: " + min);
+        System.out.println("Maximum number: " + max);
+        System.out.println("Minimum number: " + min);
 
         int p =0;
         for (int h=0; h<mas.length;h++) {
             if (mas[h]==5)
             {p++;}
         }
-        System.out.println("Количество 5 = "+p);
-//делаем сортировку пузырьком
+        System.out.println("amount 5 = "+p);
+//do the sorting with a bubble
         for(int s=0; s <mas.length; s++){
             for(int j = s; j >=1; j--) {
                 if (mas[j-1] > mas[j]) {
@@ -63,7 +63,7 @@ public class DZ3 {
             }
         }
         String x1=Arrays.toString(mas);
-        System.out.print("Отсортированный массив:   "+x1);
+        System.out.print("Sorted array:   "+x1);
 
         }
     }
