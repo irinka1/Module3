@@ -1,0 +1,10 @@
+Exercise 1
+
+Create a new project on GitHub and on the local computer
+Write a program that:
+1. on the input through the console takes the size of the array
+2. the input through the console takes an array of numbers
+3. find the minimum number in the array and output to the console (without using sorting)
+4. Find the maximum number in the array and output to the console (without using sorting)
+5. Count the number of repetitions of the number 5 and output to the console
+6. output to the console the sorted array
